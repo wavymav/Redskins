@@ -9,7 +9,7 @@ gulp.task('default', function() {
 		// Connvert the JSX in /src into JS
 		.pipe(react())
 		// When finished then concat the js into app.js
-		.pipe(concat('app,js'))
+		.pipe(concat('app.js'))
 		// Then save the app.js file in the root directory
 		.pipe(gulp.dest('./'));
 });
