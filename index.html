@@ -25,13 +25,13 @@ var PlayerCard = React.createClass({
 		return (
 			<div className="col-sm-6 col-md-4">
 				<div className="thumbnail">
-					<img src="http://isportsweb.com/wp-content/uploads//2014/10/jack.jpg" alt="DeSean Jackson"/>
+					<img src={this.props.image} alt={this.props.name}/>
 					<div className="caption">
-						<h3>DeSean Jackson<strong><i>#11</i></strong></h3>
-			    	<p><strong>Position: </strong>WR</p>
-			    	<p><strong>Age: </strong>28</p>
-			    	<p><strong>Experince: </strong>8 year(s)</p>
-			    	<p><strong>College: </strong>Cal Berkeley</p>
+						<h3>{this.props.name}<strong><i>#{this.props.number}</i></strong></h3>
+			    	<p><strong>Position: </strong>{this.props.number}</p>
+			    	<p><strong>Age: </strong>{this.props.age}</p>
+			    	<p><strong>Experince: </strong>{this.props.experience} year(s)</p>
+			    	<p><strong>College: </strong>{this.props.college}</p>
 					</div>
 				</div>
 			</div>
@@ -39,8 +39,19 @@ var PlayerCard = React.createClass({
 	}
 });
 
+// DeSean Jackson PlayerCard info
+var playerData = {
+	name : "DeSean Jackson",
+	number : 11,
+	position : "WR",
+	age : 28,
+	experience : 8,
+	college : "Cal Berkeley",
+	image :"http://isportsweb.com/wp-content/uploads//2014/10/jack.jpg"
+}
+
 // Using React's cerateElements() method to create the PlayerCard component and store the value in playerCardElement var
-var playerCardElement = React.createElement(PlayerCard);
+var playerCardElement = React.createElement(PlayerCard, playerData);
 
 // The React render() method renders the playerCardElement to the specified target area within the html file.
 React.render(playerCardElement, document.querySelector('.target'));
