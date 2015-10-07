@@ -1,5 +1,8 @@
+var React = require('react'); // Requiring the react module
+
 // Using React's createClass method to create a PlayerCard component class
-var PlayerCard = React.createClass({
+// Setting module.exports to this React.createClass method
+module.exports = React.createClass({
 	// Using the render method to return this info
 	render: function() {
 		return (
