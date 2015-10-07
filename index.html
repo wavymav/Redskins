@@ -17,26 +17,31 @@
 </body>
 
 <script type="text/jsx">
+
+// Using React's createClass method to create a PlayerCard component class
 var PlayerCard = React.createClass({
+	// Using the render method to return this info
 	render: function() {
 		return (
 			<div className="col-sm-6 col-md-4">
 				<div className="thumbnail">
-					<img src="http://isportsweb.com/wp-content/uploads//2014/10/jack.jpg" alt="DeSean Jackson">
+					<img src="http://isportsweb.com/wp-content/uploads//2014/10/jack.jpg" alt="DeSean Jackson"/>
 					<div className="caption">
-					<h3>DeSean Jackson<strong><i>#11</i></strong></h3>
-			    <p><strong>Position: </strong>WR</p>
-			    <p><strong>Age: </strong>28</p>
-			    <p><strong>Experince: </strong>8 year(s)</p>
-			    <p><strong>College: </strong>Cal Berkeley</p> +
+						<h3>DeSean Jackson<strong><i>#11</i></strong></h3>
+			    	<p><strong>Position: </strong>WR</p>
+			    	<p><strong>Age: </strong>28</p>
+			    	<p><strong>Experince: </strong>8 year(s)</p>
+			    	<p><strong>College: </strong>Cal Berkeley</p>
 					</div>
 				</div>
 			</div>
 		);
 	}
-
-	var playerCardElement = React.createElement(PlayerCard);
-
-	React.render(playerCardElement, document.querySelector('.target'));
 });
+
+// Using React's cerateElements() method to create the PlayerCard component and store the value in playerCardElement var
+var playerCardElement = React.createElement(PlayerCard);
+
+// The React render() method renders the playerCardElement to the specified target area within the html file.
+React.render(playerCardElement, document.querySelector('.target'));
 </script>
