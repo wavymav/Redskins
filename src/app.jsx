@@ -40,6 +40,8 @@ var players = {
 	]
 };
 
+console.log('HI');
+
 // Using React's cerateElements() method to create the PlayerCard component and store the value in playerCardElement var
 var playerCardElement = React.createElement(PlayerPanelCardList, players);
 
