@@ -4,16 +4,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 </head>
 <body>
-	<div class="container">
-		<div class="panel panel-default">
-			<div class="panel-heading">Redskins</div>
-			  <div class="panel-body">
-					<div class="row target">
+	<div class="container target">
 
-					</div>
-			  </div>
-			</div>
-		</div>
+	</div>
 </body>
 
 <script type="text/jsx">
@@ -28,13 +21,36 @@ var PlayerCard = React.createClass({
 					<img src={this.props.image} alt={this.props.name}/>
 					<div className="caption">
 						<h3>{this.props.name}<strong><i>#{this.props.number}</i></strong></h3>
-			    	<p><strong>Position: </strong>{this.props.number}</p>
+			    	<p><strong>Position: </strong>{this.props.position}</p>
 			    	<p><strong>Age: </strong>{this.props.age}</p>
 			    	<p><strong>Experince: </strong>{this.props.experience} year(s)</p>
 			    	<p><strong>College: </strong>{this.props.college}</p>
 					</div>
 				</div>
 			</div>
+		);
+	}
+});
+
+var PlayerPanel = React.createClass({
+	render: function() {
+		return (
+			<div className="panel panel-default">
+				<div className="panel-heading">Redskins</div>
+			  <div className="panel-body">
+					<div className="row">
+						<PlayerCard
+							image={this.props.image}
+							name={this.props.name}
+							number={this.props.number}
+							position={this.props.position}
+							age={this.props.age}
+							experience={this.props.experience}
+							college={this.props.college}
+						/>
+			  </div>
+			</div>
+		</div>
 		);
 	}
 });
@@ -51,7 +67,7 @@ var playerData = {
 }
 
 // Using React's cerateElements() method to create the PlayerCard component and store the value in playerCardElement var
-var playerCardElement = React.createElement(PlayerCard, playerData);
+var playerCardElement = React.createElement(PlayerPanel, playerData);
 
 // The React render() method renders the playerCardElement to the specified target area within the html file.
 React.render(playerCardElement, document.querySelector('.target'));
