@@ -4,14 +4,24 @@ var PlayerPanelCardList = require('./playerPanelCardList'); // Requiring the Pla
 // players object that holds an array of playerData objects
 var players = {
 	playerData: [
+		//http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/14880.png&w=350&h=254
 		{
-			name : "Jordan Reed",
-			number : 86,
-			position : "TE",
-			age : 25,
-			experience : 2,
-			college : "Florida",
-			image : "https://cbswashington.files.wordpress.com/2015/10/gettyimages-491323934.jpg?w=620&h=349&crop=1"
+			name : "Kirk Cousins",
+			number : 8,
+			position : "QB",
+			age : 27,
+			experience : 4,
+			college : "Michigan State",
+			image : "http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/14880.png&w=250&h=174"
+		},
+		{
+			name : "Jamison Crowder",
+			number : 80,
+			position : "WR",
+			age : 22,
+			experience : "Rookie",
+			college : "Duke",
+			image : "http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2576716.png&w=250&h=174"
 		},
 		{
 			name : "Pierre Garcon",
@@ -20,16 +30,16 @@ var players = {
 			age : 29,
 			experience : 8,
 			college : "Mount Union",
-			image :"http://www.rantsports.com/nfl/files/2015/09/slide41.jpg"
+			image :"http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/11439.png&w=250&h=174"
 		},
 		{
-			name : "DeSean Jackson",
-			number : 11,
-			position : "WR",
+			name : "Chris Baker",
+			number : 92,
+			position : "DT",
 			age : 28,
-			experience : 8,
-			college : "Cal Berkeley",
-			image :"http://isportsweb.com/wp-content/uploads//2014/10/jack.jpg"
+			experience : 4,
+			college : "Hampton",
+			image :"http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/12760.png&w=250&h=174"
 		},
 		{
 			name : "Ryan Kerrigan",
@@ -38,7 +48,7 @@ var players = {
 			age : 24,
 			experience : 4,
 			college : "Purdue",
-			image :"http://s3media.247sports.com/Uploads/Assets/830/618/6_3618830.jpg"
+			image :"http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/13973.png&w=250&h=174"
 		},
 	]
 };
