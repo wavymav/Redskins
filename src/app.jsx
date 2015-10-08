@@ -1,5 +1,5 @@
 var React = require('react'); // Requiring the react module
-var PlayerPanelCardList = require('./playerPanelCardList'); // Requiring the PlayerPanelCardList component form playerPanelCardList.js
+var PlayerPanelList = require('./playerPanelList'); // Requiring the PlayerPanelCardList component form playerPanelCardList.js
 
 // players object that holds an array of playerData objects
 var players = {
@@ -55,7 +55,7 @@ var players = {
 
 
 // Using React's cerateElements() method to create the PlayerCard component and store the value in playerCardElement var
-var playerCardElement = React.createElement(PlayerPanelCardList, players);
+var playerCardElement = React.createElement(PlayerPanelList, players);
 
 // The React render() method renders the playerCardElement to the specified target area within the html file.
 React.render(playerCardElement, document.querySelector('.target'));
